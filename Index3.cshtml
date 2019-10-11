@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="text-center">
+        <h1 style="color:darkblue" , class="display-4">Welcome To CandyLand</h1>
+        <p style="color:darkblue"> Where reality is nonexistent and Fantasies aren't just a dream</p>
+        <section style="padding:10px;" class="container-fluid text-center">
+            <span><a class="btn btn-light" asp-area="" asp-page="/Candies/Index">Candies</a></span>
+            <span><a class="btn btn-light" asp-area="" asp-page="/Manufacturers/Index">Order</a></span>
+            <span><a class="btn btn-light" asp-area="" asp-page="/Stores/Index">Stores</a></span>
+        </section>
+
+    </div>

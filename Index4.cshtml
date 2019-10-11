@@ -1,0 +1,52 @@
+﻿@page
+@model sweet.Pages.stores.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Store[0].city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store[0].state)
+            </th>
+            <
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store[0].onumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Store)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.onumber)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CID">Delete</a>
+            </td>
+           </tr> }
+    </tbody>
+</table>
